@@ -21,9 +21,11 @@ export const HeaderBanner = ({ product }) => {
       />
       <div>
         <Link href={`/product/${name}`}>
-          <Button className={styles.bannerButton} type='button'>
-            Comprar ahora
-          </Button>
+          <a>
+            <Button className={styles.bannerButton} type='button'>
+              Comprar ahora
+            </Button>
+          </a>
         </Link>
         <div className={styles.desc}>
           <Text>{description}</Text>
