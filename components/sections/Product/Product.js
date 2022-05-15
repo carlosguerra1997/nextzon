@@ -5,7 +5,6 @@ import { Image } from '../../common/Image'
 import { urlFor } from '../../../config/SanityClient'
 
 export const Product = ({ image, name, slug, price }) => {
-  console.log('Image... ', image)
   return (
     <div>
       <Link href={`/product/${slug.current}`}>
