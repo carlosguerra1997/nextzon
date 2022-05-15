@@ -1,20 +1,18 @@
 import styles from './Home.module.css'
 
-import { HeaderBanner } from './Banners/HeaderBanner'
+import { HeaderBanner } from './Banners/Header/HeaderBanner'
 
-const products = ['Product 1', 'Product 2']
-
-export const Home = () => {
+export const Home = ({ bannerProducts, products }) => {
   return (
     <div>
-      <HeaderBanner />
+      <HeaderBanner product={bannerProducts[0]} />
       <div className={styles.productsHeading}>
         <h2>Productos más vendidos</h2>
         <p>Cascos</p>
       </div>
       <div className={styles.productsContainer}>
-       { products.map(product => (
-         product
+       { products?.map(product => (
+         product.name
        ))}
       </div>
     </div>
