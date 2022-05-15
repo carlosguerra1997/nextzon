@@ -2,22 +2,24 @@
   font-size: 20px;
 }
 
-.bannerProductSubname {
+.bannerSaleTime {
   font-size: 4rem;
+  font-weight: 600;
   margin-top: 4px;
+  width: 50%;
 }
 
 .bannerImage {
-  height: 450px;
+  height: 400px;
   position: absolute;
-  right:20%;
+  right: 5%;
   top: 0%;
-  width: 450px;
+  width: 400px;
 }
 
 .bannerButton {
   border-radius: 15px;
-  background-color: #f02d34;
+  background-color: #bd383a;
   border: none;
   color: white;
   cursor: pointer;
@@ -28,7 +30,7 @@
   z-index:10000 !important;
 }
 
-.desc{
+.desc {
   color: #324d67;
   bottom: 5%;
   display: flex;
@@ -39,14 +41,14 @@
   width: 300px;
 }
 
-.desc h5{
+.desc h5 {
   align-self: flex-end;
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-.desc p{
+.desc p {
   color: #5f5f5f;
   font-weight: 100;
   text-align: end;
