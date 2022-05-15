@@ -1,0 +1,43 @@
+.bannerContainer {
+  padding: 100px 40px;
+  background-color: #f02d34;
+  border-radius: 15px;
+  position: relative;
+  height: 400px;
+  line-height: 1; 
+  color: white;
+  width: 100%;
+  margin-top: 120px;
+}
+
+.bannerDescription {
+  display: flex ;
+  justify-content: space-between;
+}
+
+.left h3 {
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.right h3 {
+  font-size: 45px;
+}
+
+.bannerButton {
+  border-radius: 15px;
+  background-color: #fff;
+  border: none;
+  color: #f02d34;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  padding: 10px 16px;
+}
+
+.bannerImage {
+  left: 25%;
+  position: absolute;
+  top: -25%;
+}
