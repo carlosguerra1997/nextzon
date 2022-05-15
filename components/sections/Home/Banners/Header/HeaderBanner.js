@@ -11,7 +11,7 @@ import { Text } from '../../../../common/Text'
 export const HeaderBanner = ({ product }) => {
   const { name, description, image, saleTime } = product
   return (
-    <Banner>
+    <Banner className={styles.bannerContainer}>
       <Text className={styles.bannerProductName}>{name}</Text>
       <Text className={styles.bannerSaleTime}>{saleTime}</Text>
       <Image 

@@ -1,8 +1,6 @@
-import styles from './Banner.module.css'
-
-export const Banner = ({ children }) => {
+export const Banner = ({ className, children }) => {
   return (
-    <div className={styles.bannerContainer}>
+    <div className={className}>
       <div>
         { children }
       </div>
