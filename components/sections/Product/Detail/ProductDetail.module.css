@@ -60,7 +60,7 @@
 .minus {
   background-color: #fff;
   border: 1px solid #324d67;
-  padding: 5px 15px;
+  padding: 8px 15px;
 }
 
 .minus:hover {
@@ -70,15 +70,15 @@
 
 .num {
   border: 1px solid #324d67;
-  padding: 5px 15px;
+  padding: 8px 15px;
   text-align: center;
-  width: 15%;
+  width: 20%;
 }
 
 .plus {
   background-color: #fff;
   border: 1px solid #324d67;
-  padding: 5px 15px;
+  padding: 8px 15px;
 }
 
 .plus:hover {

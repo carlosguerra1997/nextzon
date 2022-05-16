@@ -12,7 +12,7 @@ export const ProductDescription = ({ productDetail }) => {
       <h4>Detalles del producto:</h4>
       <Text>{details}</Text>
       <Text className={styles.price}>{price}€</Text>
-      <ProductDetailForm />
+      <ProductDetailForm productDetail={productDetail} />
     </div>
   )
 }
