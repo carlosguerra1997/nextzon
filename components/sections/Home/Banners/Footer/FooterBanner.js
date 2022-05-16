@@ -23,13 +23,7 @@ export const FooterBanner = ({ product }) => {
             </a>
           </Link>
         </div>
-        <div className={styles.right}>
-          <h3>{discount}</h3>
-          <h3>{saleTime}</h3>
-          <h3>{discountDate}</h3>
-        </div>
       </div>
-
       <Image 
         alt={name} 
         className={styles.bannerImage}
