@@ -1,0 +1,1 @@
+-- eCommerce application for educational purposes --
