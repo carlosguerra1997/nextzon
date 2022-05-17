@@ -1,0 +1,144 @@
+.cartWrapper {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: all 1s ease-in-out;
+  width: 100vw;
+  z-index: 100;
+}
+
+.cartContainer {
+  background-color: white;
+  float: right;
+  height: 100vh;
+  padding: 40px 10px;
+  position: relative;
+  width: 600px;
+}
+
+.cartHeading {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: 500;
+  gap: 2px;
+  margin-left: 10px;
+}
+
+.heading {
+  margin-left: 10px;
+}
+
+.cartTotalItems {
+  color: #324d67;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.emptyCart {
+  margin:40px;
+  text-align:center;
+}
+
+.emptyCart h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.productContainer {
+  margin-top: 15px;
+  max-height: 70vh;
+  overflow: auto;
+  padding: 20px 10px;
+}
+
+.product {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+.cartProductImage {
+  background-color: #ebebeb;
+  border-radius: 15px;
+  height: 150px;
+  padding: 5px;
+  width:180px;
+}
+
+.productDescription {
+  color: #324d67;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.productActions {
+  align-items: center;
+  color: #324d67;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 75px;
+  width: 350px;
+}
+
+.productDescription h5 {
+  color: #324d67;
+  font-size: 16px;
+  margin: 0;
+}
+
+.productDescription h4 {
+  color: #324d67;
+  font-size: 16px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.removeItem {
+  background: transparent;
+  border: none;
+  color: #f02d34;
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.cartBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 65px;
+  width: 100%;
+}
+
+.cartBottom h3 {
+  margin: 0;
+}
+
+.btnContainer {
+  margin: auto;
+  padding: 0 65px;
+}
+
+.payBtn {
+  background-color: #324d67;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 10px 12px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.payBtn:hover {
+  filter: brightness(95%);
+}
