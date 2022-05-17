@@ -9,7 +9,6 @@ import { CartReducer } from './CartReducer'
 export const CartState = ({ children }) => {
   const initialState = {
     cartProducts: [],
-    showCart: false,
     totalPrice: 0,
     totalQuantities: 0
   }
@@ -32,7 +31,6 @@ export const CartState = ({ children }) => {
   return (
     <CartContext.Provider value={{
       cartProducts: state.cartProducts,
-      showCart: state.showCart,
       totalPrice: state.totalPrice,
       totalQuantities: state.totalQuantities,
       addToCart
