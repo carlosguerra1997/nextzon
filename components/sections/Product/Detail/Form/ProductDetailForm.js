@@ -7,21 +7,22 @@ import { Button } from "../../../../common/Button"
 import { ProductCounter } from './ProductCounter'
 
 export const ProductDetailForm = ({ productDetail }) => {
-  const [ counter, setCounter ] = useState(1)
+  const [ productQuantity, setProductQuantity ] = useState(1)
 
   const cartContext = useContext(CartContext);
   const { addToCart } = cartContext;
 
   const handleBuy = e => {
     e.preventDefault()
-    addToCart(productDetail, counter)
+    addToCart(productDetail, productQuantity)
+    setProductQuantity(1)
   }
 
   return (
     <form>
       <div className={styles.quantity}>
           <h3>Cantidad:</h3>
-          <ProductCounter counter={counter} setCounter={setCounter} />
+          <ProductCounter productQuantity={productQuantity} setProductQuantity={setProductQuantity} />
         </div>
         <div className={styles.buttons}>
           <Button className={styles.addToCart} type='submit' onClick={handleBuy}>

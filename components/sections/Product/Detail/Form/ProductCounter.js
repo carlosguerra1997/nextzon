@@ -3,13 +3,13 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 
 import { Button } from "../../../../common/Button"
 
-export const ProductCounter = ({ counter, setCounter }) => {
+export const ProductCounter = ({ productQuantity, setProductQuantity }) => {
 
-  const handleAddOne = () => setCounter(counter + 1)
+  const handleAddOne = () => setProductQuantity(prevValue => prevValue + 1)
 
   const handleRemoveOne = () => {
-    if (counter === 1) setCounter(1)
-    else setCounter(counter - 1)
+    if (productQuantity === 1) setProductQuantity(1)
+    else setProductQuantity(prevValue => prevValue - 1)
   }
 
   return (
@@ -17,7 +17,7 @@ export const ProductCounter = ({ counter, setCounter }) => {
       <Button className={styles.minus} type='button' onClick={handleRemoveOne}> 
         <AiOutlineMinus /> 
       </Button>
-      <input className={styles.num} name='counter' value={counter} disabled />
+      <input className={styles.num} name='counter' value={productQuantity} disabled />
       <Button className={styles.plus} type='button'  onClick={handleAddOne}>
         <AiOutlinePlus />
       </Button>
