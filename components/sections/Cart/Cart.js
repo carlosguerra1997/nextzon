@@ -24,7 +24,7 @@ export const Cart = ({ setShowCart }) => {
         <Button className={styles.cartHeading} type='button' onClick={handleShowCart}>
           <AiOutlineLeft />
           <span className={styles.heading}>Carrito de compra</span>
-          <span className={styles.cartTotalItems}>({totalQuantities} productos)</span>
+          <p className={styles.cartTotalItems}>({totalQuantities} productos)</p>
         </Button>
         {
           !cartProducts.length ? (

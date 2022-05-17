@@ -57,35 +57,6 @@
   display: flex;
 }
 
-.minus {
-  background-color: #fff;
-  border: 1px solid #324d67;
-  padding: 8px 15px;
-}
-
-.minus:hover {
-  cursor: pointer;
-  filter: brightness(95%);
-}
-
-.num {
-  border: 1px solid #324d67;
-  padding: 8px 15px;
-  text-align: center;
-  width: 20%;
-}
-
-.plus {
-  background-color: #fff;
-  border: 1px solid #324d67;
-  padding: 8px 15px;
-}
-
-.plus:hover {
-  cursor: pointer;
-  filter: brightness(95%);
-}
-
 .buttons {
   display: flex;
   gap: 15px;

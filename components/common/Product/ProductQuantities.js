@@ -1,17 +1,9 @@
-import styles from '../ProductDetail.module.css'
+import styles from './Product.module.css'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 
-import { Button } from "../../../../common/Button"
+import { Button } from '../Button'
 
-export const ProductCounter = ({ productQuantity, setProductQuantity }) => {
-
-  const handleAddOne = () => setProductQuantity(prevValue => prevValue + 1)
-
-  const handleRemoveOne = () => {
-    if (productQuantity === 1) setProductQuantity(1)
-    else setProductQuantity(prevValue => prevValue - 1)
-  }
-
+export const ProductQuantities = ({ productQuantity, handleAddOne, handleRemoveOne }) => {
   return (
     <div className={styles.quantityDesc}>
       <Button className={styles.minus} type='button' onClick={handleRemoveOne}> 
