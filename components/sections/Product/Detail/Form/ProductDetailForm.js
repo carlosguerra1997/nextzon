@@ -1,10 +1,11 @@
 import styles from '../ProductDetail.module.css'
 import { useContext, useState } from 'react'
+import toast from 'react-hot-toast'
 
 import { CartContext } from '../../../../../context/Cart/CartContext'
 
 import { Button } from "../../../../common/Button"
-import { ProductCounter } from './ProductCounter'
+import { ProductQuantities } from '../../../../common/Product/ProductQuantities'
 
 export const ProductDetailForm = ({ productDetail }) => {
   const [ productQuantity, setProductQuantity ] = useState(1)
@@ -16,13 +17,25 @@ export const ProductDetailForm = ({ productDetail }) => {
     e.preventDefault()
     addToCart(productDetail, productQuantity)
     setProductQuantity(1)
+    toast.success(`Producto añadido al carrito`)
+  }
+
+  const handleAddOne = () => setProductQuantity(prevValue => prevValue + 1)
+
+  const handleRemoveOne = () => {
+    if (productQuantity === 1) setProductQuantity(1)
+    else setProductQuantity(prevValue => prevValue - 1)
   }
 
   return (
     <form>
       <div className={styles.quantity}>
           <h3>Cantidad:</h3>
-          <ProductCounter productQuantity={productQuantity} setProductQuantity={setProductQuantity} />
+          <ProductQuantities 
+            productQuantity={productQuantity}
+            handleAddOne={handleAddOne} 
+            handleRemoveOne={handleRemoveOne}
+          />
         </div>
         <div className={styles.buttons}>
           <Button className={styles.addToCart} type='submit' onClick={handleBuy}>

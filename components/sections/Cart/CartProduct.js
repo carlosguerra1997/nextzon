@@ -1,10 +1,12 @@
 import styles from './Cart.module.css'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 
 import { TiDeleteOutline } from 'react-icons/ti'
 
 import toast from 'react-hot-toast'
 import { urlFor } from '../../../config/SanityClient'
+
+import { CartContext } from '../../../context/Cart/CartContext'
 
 import { Button } from '../../common/Button'
 import { Image } from '../../common/Image'
@@ -14,15 +16,25 @@ export const CartProduct = ({ product }) => {
   const { image, name, price, quantity } = product
   const [ productQuantity, setProductQuantity ] = useState(quantity)
 
+  const cartContext = useContext(CartContext);
+  const { addToCart, deleteFromCart } = cartContext;
+
   const handleDeleteCartItem = () => {
+    deleteFromCart(product)
     toast.success(`${name} eliminado del carrito con éxito`)
   }
 
-  const handleAddOne = () => setProductQuantity(prevValue => prevValue + 1)
+  const handleAddOne = () => {
+    setProductQuantity(prevValue => prevValue + 1)
+    addToCart(product, 1)
+  }
 
   const handleRemoveOne = () => {
     if (productQuantity === 1) setProductQuantity(1)
-    else setProductQuantity(prevValue => prevValue - 1)
+    else {
+      setProductQuantity(prevValue => prevValue - 1)
+      addToCart(product, -1)
+    }
   }
 
   return (
