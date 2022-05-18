@@ -1,7 +1,10 @@
 import { useReducer } from 'react'
-import toast from 'react-hot-toast'
 
-import { ADD_EXISTING_ITEM_TO_CART, ADD_NON_EXISTING_ITEM_TO_CART } from '../../types'
+import { 
+  ADD_EXISTING_ITEM_TO_CART, 
+  ADD_NON_EXISTING_ITEM_TO_CART, 
+  DELETE_ITEM_FROM_CART 
+} from '../../types'
 
 import { CartContext } from './CartContext'
 import { CartReducer } from './CartReducer'
@@ -24,8 +27,13 @@ export const CartState = ({ children }) => {
       product.quantity = quantity
       dispatch({ type: ADD_NON_EXISTING_ITEM_TO_CART, payload: { product, quantity } })
     }
+  }
 
-    toast.success(`${quantity} ${product.name} agregados al carrito`)
+  const deleteFromCart = (product) => {
+    dispatch({
+      type: DELETE_ITEM_FROM_CART,
+      payload: product
+    })
   }
 
   return (
@@ -33,7 +41,8 @@ export const CartState = ({ children }) => {
       cartProducts: state.cartProducts,
       totalPrice: state.totalPrice,
       totalQuantities: state.totalQuantities,
-      addToCart
+      addToCart,
+      deleteFromCart
     }}>
       { children }
     </CartContext.Provider>
