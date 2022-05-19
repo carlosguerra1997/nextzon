@@ -126,7 +126,7 @@
   padding: 0 65px;
 }
 
-.payBtn {
+.btn {
   background-color: #324d67;
   border-radius: 15px;
   border: none;
@@ -139,6 +139,36 @@
   width: 100%;
 }
 
-.payBtn:hover {
+.btn:hover {
   filter: brightness(95%);
+}
+
+.successWrapper, .cancelWrapper {
+  background-color: white;
+  min-height: 60vh;
+}
+
+.success, .cancel{
+  align-items: center;
+  background-color: #dcdcdc;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 160px;
+  margin: auto;
+  padding: 50px;
+  width: 1000px;
+}
+
+.successCheckout {
+  color: green;
+}
+
+.success h2 {
+  color:#324d67;
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0;
+  margin-top: 10px;
 }

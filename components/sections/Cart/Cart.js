@@ -1,9 +1,9 @@
 import styles from './Cart.module.css'
 import { useContext, useRef } from 'react'
+import { AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai'
 
 import { CartContext } from '../../../context/Cart/CartContext'
-
-import { AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai'
+import { checkoutProducts } from '../../../queries/checkoutProducts'
 
 import { Button } from '../../common/Button'
 import { CartProducts } from './CartProducts'
@@ -16,6 +16,10 @@ export const Cart = ({ setShowCart }) => {
 
   const handleShowCart = () =>  {
     setShowCart(prevState => !prevState)
+  }
+
+  const handleCheckout = async () => {
+    await checkoutProducts(cartProducts)
   }
 
   return (
@@ -40,7 +44,7 @@ export const Cart = ({ setShowCart }) => {
                 <h3>{totalPrice}€</h3>
               </div>
               <div className={styles.btnContainer}>
-                <Button className={styles.payBtn}>Realizar Pedido</Button>
+                <Button className={styles.btn} onClick={handleCheckout}>Realizar Pedido</Button>
               </div>
             </div>
           )
