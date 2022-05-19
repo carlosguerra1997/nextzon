@@ -9,7 +9,7 @@ import { Image } from '../../../../common/Image'
 import { Text } from '../../../../common/Text'
 
 export const HeaderBanner = ({ product }) => {
-  const { name, description, image, saleTime } = product
+  const { name, description, image, saleTime, slug } = product
   return (
     <Banner className={styles.bannerContainer}>
       <Text className={styles.bannerProductName}>{name}</Text>
@@ -20,7 +20,7 @@ export const HeaderBanner = ({ product }) => {
         alt='Corsair headphones' 
       />
       <div>
-        <Link href={`/product/${name}`}>
+        <Link href={`/product/${slug.current}`}>
           <a>
             <Button className={styles.bannerButton} type='button'>
               Comprar ahora

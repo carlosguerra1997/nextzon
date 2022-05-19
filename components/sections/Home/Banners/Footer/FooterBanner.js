@@ -7,7 +7,7 @@ import { Image } from '../../../../common/Image'
 import { urlFor } from '../../../../../config/SanityClient'
 
 export const FooterBanner = ({ product }) => {
-  const { description, discount, discountDate, image, name, saleTime } = product
+  const { description, image, name, slug } = product
 
   return (
     <Banner className={styles.bannerContainer}>
@@ -15,10 +15,10 @@ export const FooterBanner = ({ product }) => {
         <div className={styles.left}>
           <h3>{name}</h3>
           <p>{description}</p>
-          <Link href={`/product/${name}`}>
+          <Link href={`/product/${slug.current}`}>
             <a>
               <Button className={styles.bannerButton} type='submit'>
-                Comprar ahora!
+                Comprar ahora
               </Button>
             </a>
           </Link>
