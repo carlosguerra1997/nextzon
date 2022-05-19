@@ -3,6 +3,7 @@ import { useReducer } from 'react'
 import { 
   ADD_EXISTING_ITEM_TO_CART, 
   ADD_NON_EXISTING_ITEM_TO_CART, 
+  CLEAR_CART, 
   DELETE_ITEM_FROM_CART 
 } from '../../types'
 
@@ -36,12 +37,17 @@ export const CartState = ({ children }) => {
     })
   }
 
+  const clearCart = () => {
+    dispatch({ type: CLEAR_CART })
+  }
+
   return (
     <CartContext.Provider value={{
       cartProducts: state.cartProducts,
       totalPrice: state.totalPrice,
       totalQuantities: state.totalQuantities,
       addToCart,
+      clearCart,
       deleteFromCart
     }}>
       { children }
