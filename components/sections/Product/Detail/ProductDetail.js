@@ -2,9 +2,10 @@ import { useState } from 'react'
 import styles from './ProductDetail.module.css'
 import { urlFor } from '../../../../config/SanityClient'
 
-import { MayLikeProducts } from './MayLikeProducts'
 import { Image } from '../../../common/Image'
+import { MayLikeProducts } from './MayLikeProducts'
 import { ProductDescription } from './ProductDescription'
+import { RelatedProducts } from './RelatedProducts'
 
 export const ProductDetail = ({ products, productDetail }) => {
   const { image, name, slug } = productDetail
@@ -33,7 +34,8 @@ export const ProductDetail = ({ products, productDetail }) => {
         </div>
         <ProductDescription productDetail={productDetail} />
       </div>
-      <MayLikeProducts products={products} currentProduct={slug.current} />
+      <MayLikeProducts products={products} currentProduct={productDetail} />
+      <RelatedProducts products={products} currentProduct={productDetail} />
     </div>
   )
 }

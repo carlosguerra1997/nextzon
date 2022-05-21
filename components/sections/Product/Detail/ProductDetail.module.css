@@ -107,3 +107,14 @@
   justify-content: center;
   margin-top: 20px;
 }
+
+.relatedProductsWrapper {
+  margin-top: 20px;
+}
+
+.relatedProductsWrapper h2 {
+  color: #324d67;
+  font-size: 28px;
+  margin: 50px;
+  text-align: center;
+}
